@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 import csv
 from datetime import datetime
 import smtplib
+import os
+import json
 from email.message import EmailMessage
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -25,7 +27,7 @@ def submit():
         writer = csv.writer(file)
         writer.writerow([timestamp, name, email, attendance, guests])
 
-    # Send confirmation email to user
+    # Send confirmation email
     send_email(name, email, attendance, guests)
 
     # Log to Google Sheets
@@ -34,8 +36,8 @@ def submit():
     return render_template("thank_you.html", name=name)
 
 def send_email(name, recipient, attendance, guests):
-    email_address = "vokhacminhdai@gmail.com"       # Replace with your Gmail
-    email_password = "danny0938297693"         # Use your App Password
+    email_address = os.getenv("EMAIL_ADDRESS")
+    email_password = os.getenv("EMAIL_PASSWORD")
 
     msg = EmailMessage()
     msg['Subject'] = "RSVP Confirmation - Jubilee's Baby Shower"
@@ -66,8 +68,18 @@ def send_email(name, recipient, attendance, guests):
         print("❌ Error sending email:", e)
 
 def log_to_google_sheets(name, email, attendance, guests):
-    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name("rsvp-logger-466919-9f69e89b2063.json", scope)
+    scope = [
+        "https://spreadsheets.google.com/feeds",
+        "https://www.googleapis.com/auth/drive"
+    ]
+
+    creds_json = os.getenv("GOOGLE_CREDS_JSON")
+    if not creds_json:
+        print("❌ GOOGLE_CREDS_JSON not set")
+        return
+
+    creds_dict = json.loads(creds_json)
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
     client = gspread.authorize(creds)
 
     sheet = client.open("RSVP Guest List").sheet1
