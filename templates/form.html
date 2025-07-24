@@ -2,104 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RSVP for Jubilee Thiên Hân Tôn</title>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      font-family: "Georgia", serif;
-      color: #333;
-      background: url('/static/pooh_2.jpg') no-repeat center top;
-      background-size: cover;
-    }
-
-    .spacer {
-      height: 540px;
-    }
-
-    .form-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding-bottom: 100px;
-    }
-
-    .form-box {
-      background-color: rgba(255, 255, 255, 0.92);
-      padding: 30px;
-      border-radius: 12px;
-      max-width: 500px;
-      width: 90%;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 20px;
-      margin-bottom: 20px;
-      line-height: 1.4;
-      font-weight: 600;
-      color: #5a3e2b;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    label {
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
-      font-family: "Georgia", serif;
-      box-sizing: border-box;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-    }
-
-    button {
-      background-color: #f7c948;
-      border: none;
-      color: white;
-      padding: 12px;
-      border-radius: 6px;
-      font-size: 15px;
-      font-family: "Georgia", serif;
-      font-weight: bold;
-      cursor: pointer;
-      width: 100%;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #f5b51e;
-    }
-
-    @media (max-width: 600px) {
-      .spacer {
-        height: 360px;
-      }
-
-      h1 {
-        font-size: 18px;
-        white-space: normal;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <div class="spacer"></div>
-
-  <div class="form-wrapper">
+  <div class="container">
     <div class="form-box">
       <h1>RSVP for Jubilee Thiên Hân Tôn’s Baby Shower</h1>
       <form action="/submit" method="POST">
