@@ -8,7 +8,7 @@
             font-family: "Georgia", serif;
             background-color: #fffaf3;
             margin: 0;
-            padding: 40px;
+            padding: 40px 20px;
             text-align: center;
             color: #5a3e2b;
         }
@@ -47,13 +47,12 @@
             background-color: #e6b835;
         }
 
-        .back-fixed {
-            position: fixed;
-            bottom: 550px;
-            left: 40px;
+        .back-button {
+            margin-top: 40px;
+            text-align: center;
         }
 
-        .back-fixed a {
+        .back-button a {
             text-decoration: none;
             padding: 10px 18px;
             background-color: #e6b835;
@@ -63,30 +62,54 @@
             font-family: "Georgia", serif;
             font-size: 14px;
             transition: background-color 0.3s ease;
+            display: inline-block;
         }
 
-        .back-fixed a:hover {
+        .back-button a:hover {
             background-color: #d0a92e;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 30px 10px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            .calendar-buttons a {
+                padding: 10px 18px;
+                font-size: 14px;
+            }
+
+            .back-button a {
+                font-size: 13px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1> 🧸Thank you for your RSVP!❤ </h1>
+    <h1> 🧸Thank you for your RSVP, {{ name }} !!❤ </h1>
 
     <p>We’re excited to celebrate with you.</p>
     <p>📅 Want to add the event to your calendar?</p>
 
     <div class="calendar-buttons">
-        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Jubilee+Thiên+Hân+Tôn's+Baby+Shower&dates=20250817T010000Z/20250817T040000Z&details=Join+us+to+celebrate!&location=2060+Mandelay+Pl,+San+Jose,+CA+95138"
-   target="_blank">📅 Add to Google Calendar</a>
-
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Jubilee+Thiên+Hân+Tôn's+Baby+Shower&dates=20250817T010000Z/20250817T040000Z&details=Join+us+to+celebrate!&location=2060+Mandelay+Pl,+San+Jose,+CA+95138" target="_blank">
+            📅 Add to Google Calendar
         </a>
+
         <a href="/static/babyshower.ics" download>
             💌 Save to Calendar (for iPhone/Outlook)
         </a>
     </div>
 
-    <div class="back-fixed">
+    <div class="back-button">
         <a href="/">← Back to RSVP</a>
     </div>
 </body>
