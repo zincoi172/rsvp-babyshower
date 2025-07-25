@@ -7,8 +7,8 @@ body {
   
   .hero-image {
     width: 100%;
-    max-height: 700px;
-    object-fit: cover;
+    display: block;
+    margin: 0 auto;
     border-bottom: 5px solid #f7c948;
     border-radius: 0 0 16px 16px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -20,7 +20,7 @@ body {
     color: #5a3e2b;
     background-color: #fff5e6;
     padding: 20px;
-    margin: 40px auto 0;
+    margin: 30px auto 0;
     max-width: 800px;
     border-radius: 12px;
     text-align: center;
@@ -91,7 +91,6 @@ body {
   
   @media (max-width: 600px) {
     .hero-image {
-      max-height: 460px;
       border-radius: 0 0 12px 12px;
     }
   
@@ -112,7 +111,7 @@ body {
     .thank-you-message {
       font-size: 16px;
       padding: 16px;
-      margin: 30px 10px 0;
+      margin: 20px 10px 0;
     }
   }
   
