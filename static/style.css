@@ -7,9 +7,24 @@ body {
   
   .hero-image {
     width: 100%;
-    height: 700px;
-    background: url('/static/background.png') no-repeat center top;
-    background-size: cover;
+    max-height: 700px;
+    object-fit: cover;
+    border-bottom: 5px solid #f7c948;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .thank-you-message {
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    color: #5a3e2b;
+    background-color: #fff5e6;
+    padding: 20px;
+    margin: 40px auto 0;
+    max-width: 800px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
   }
   
   .container {
@@ -74,23 +89,10 @@ body {
     background-color: #f5b51e;
   }
   
-  .thank-you-message {
-    font-family: "Georgia", serif;
-    font-size: 18px;
-    color: #5a3e2b;
-    background-color: #fff5e6;
-    padding: 20px;
-    margin: 40px auto 0;
-    max-width: 800px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
-  }
-  
   @media (max-width: 600px) {
     .hero-image {
-      height: 460px;
-      background-position: top center;
+      max-height: 460px;
+      border-radius: 0 0 12px 12px;
     }
   
     h1 {
