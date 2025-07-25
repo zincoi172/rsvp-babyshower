@@ -43,7 +43,8 @@ body {
     font-size: 14px;
   }
   
-  input, select {
+  input,
+  select {
     width: 100%;
     padding: 12px;
     margin-top: 10px;
@@ -73,6 +74,19 @@ body {
     background-color: #f5b51e;
   }
   
+  .thank-you-message {
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    color: #5a3e2b;
+    background-color: #fff5e6;
+    padding: 20px;
+    margin: 40px auto 0;
+    max-width: 800px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
+  }
+  
   @media (max-width: 600px) {
     .hero-image {
       height: 460px;
@@ -87,8 +101,16 @@ body {
       padding: 20px;
     }
   
-    input, select, button {
+    input,
+    select,
+    button {
       font-size: 15px;
+    }
+  
+    .thank-you-message {
+      font-size: 16px;
+      padding: 16px;
+      margin: 30px 10px 0;
     }
   }
   
