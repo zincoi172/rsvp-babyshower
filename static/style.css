@@ -29,7 +29,7 @@ body {
   
   .thank-you-message {
     font-family: "Georgia", serif;
-    font-size: 19px;
+    font-size: 22px;
     color: #5a3e2b;
     background-color: #fff5e6;
     padding: 20px;
@@ -38,6 +38,7 @@ body {
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
+    line-height: 1.7;
   }
   
   .container {
