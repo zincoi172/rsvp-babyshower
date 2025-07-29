@@ -40,7 +40,7 @@ def send_email(name, recipient, attendance, guests):
     email_password = os.getenv("EMAIL_PASSWORD")
 
     msg = EmailMessage()
-    msg['Subject'] = "RSVP Confirmation - Jubilee's Baby Shower"
+    msg['Subject'] = "RSVP Confirmation - Thiên Hân's Baby Shower"
     msg['From'] = email_address
     msg['To'] = recipient
 

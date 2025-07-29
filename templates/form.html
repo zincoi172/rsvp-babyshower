@@ -4,16 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RSVP To Thiên Hân's Baby Shower</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph / Social Media Preview -->
+  <meta property="og:title" content="RSVP to Thiên Hân's Baby Shower 💌" />
+  <meta property="og:description" content="Let us know if you can join us to celebrate baby Thiên Hân’s arrival!" />
+  <meta property="og:image" content="https://rsvp-babyshower.onrender.com/static/background.png" />
+  <meta property="og:url" content="https://rsvp-babyshower.onrender.com" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Your stylesheet -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
   <!-- Poster Image -->
   <img src="{{ url_for('static', filename='background.png') }}" alt="Our Little Hunny Poster" class="hero-image" />
 
-<!-- Thankful Message -->
-<div class="thank-you-message">
+  <!-- Thankful Message -->
+  <div class="thank-you-message">
     <p>
       Thank you, LORD, for your faithfulness and provisions. We’re very thankful for having all that we need in preparation for baby Thiên Hân’s arrival.
     </p>
@@ -22,7 +35,6 @@
       Please come with a hungry tummy and a beautiful smile, that is all we need! ❤️
     </p>
   </div>
-  
 
   <!-- RSVP Form -->
   <div class="container">
