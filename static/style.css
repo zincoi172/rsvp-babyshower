@@ -5,6 +5,19 @@ body {
     color: #333;
   }
   
+  /* Remove iOS tap highlight */
+  input,
+  select,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Fix iOS Safari blue autofill background */
+  input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px #fff5e6 inset !important;
+    -webkit-text-fill-color: #5a3e2b !important;
+  }
+  
   .hero-image {
     width: 100%;
     display: block;
@@ -70,16 +83,19 @@ body {
     font-family: "Montserrat", serif;
     box-sizing: border-box;
     color: #5a3e2b;
+    background-color: #fffaf3;
   }
-
+  
+  /* Custom focus style (brown outline) */
   input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border: 2px solid #5a3e2b;
-  box-shadow: 0 0 5px rgba(90, 62, 43, 0.3);
-}
-
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border: 2px solid #5a3e2b;
+    box-shadow: 0 0 5px rgba(90, 62, 43, 0.3);
+    background-color: #fffaf3;
+  }
+  
   button {
     background-color: #f7c948;
     border: none;
