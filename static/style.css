@@ -67,8 +67,9 @@ body {
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
-    font-family: "Georgia", serif;
+    font-family: "Montserrat", serif;
     box-sizing: border-box;
+    color: #5a3e2b;
   }
   
   button {
@@ -78,7 +79,7 @@ body {
     padding: 12px;
     border-radius: 6px;
     font-size: 16px;
-    font-family: "Georgia", serif;
+    font-family: "Montserrat", serif;
     font-weight: bold;
     cursor: pointer;
     width: 100%;
