@@ -62,25 +62,25 @@ def send_email(name, recipient, attendance, guests):
     else:
         msg['Subject'] = "RSVP Confirmation - Thiên Hân's Baby Shower"
         msg.set_content(f"""
-        Hi {name},
+    Hi {name},
 
-        Thank you so much for your RSVP! We're so excited that you'll be joining us for Thiên Hân’s Baby Shower.
+    Thank you so much for your RSVP! We're so excited that you'll be joining us for Thiên Hân’s Baby Shower.
 
 
-        We've received your RSVP for {guests} guests (including yourself).
+    We've received your RSVP for {guests} guests (including yourself).
     
-        The event will be held on: 
-        🧸 Jubilee Thiên Hân Tôn’s Baby Shower
-        📍 2060 Mandelay Pl, San Jose, CA 95138
-        📅 August 16, 2025 at 6:00 PM
+    The event will be held on: 
+    🧸 Jubilee Thiên Hân Tôn’s Baby Shower
+    📍 2060 Mandelay Pl, San Jose, CA 95138
+    📅 August 16, 2025 at 6:00 PM
 
-        We're looking forward to celebrating with you. 
+    We're looking forward to celebrating with you. 
 
-        Please let us know if anything changes. Otherwise, we'll see you there!
+    Please let us know if anything changes. Otherwise, we'll see you there!
 
-        Best,
-        Huy & Thiên Thanh
-        """)
+    Best,
+    Huy & Thiên Thanh
+    """)
 
     try:
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
