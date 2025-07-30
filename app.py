@@ -64,16 +64,22 @@ def send_email(name, recipient, attendance, guests):
         msg.set_content(f"""
         Hi {name},
 
-        Thank you for your RSVP!
+        Thank you so much for your RSVP! We're so excited that you'll be joining us for Thiên Hân’s Baby Shower.
 
-        Attendance: {attendance}
-        Number of guests (including you): {guests}
 
-        We look forward to celebrating with you!
-
+        We've received your RSVP for {guests} guests (including yourself).
+    
+        The event will be held on: 
         🧸 Jubilee Thiên Hân Tôn’s Baby Shower
         📍 2060 Mandelay Pl, San Jose, CA 95138
         📅 August 16, 2025 at 6:00 PM
+
+        We're looking forward to celebrating with you. 
+
+        Please let us know if anything changes. Otherwise, we'll see you there!
+
+        Best,
+        Huy & Thiên Thanh
         """)
 
     try:
