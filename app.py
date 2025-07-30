@@ -50,14 +50,14 @@ def send_email(name, recipient, attendance, guests):
     if attendance == "No":
         msg['Subject'] = "We’ll Miss You - RSVP Received"
         msg.set_content(f"""
-        Hi {name},
+    Hi {name},
 
-        Thank you for letting us know you won't be able to attend. We understand and will miss you dearly. 
+    Thank you for letting us know you won't be able to attend. We understand and will miss you dearly. 
 
-        If your plans change, feel free to RSVP again anytime.
+    If your plans change, feel free to RSVP again anytime.
 
-        With love,
-        Huy & Thiên Thanh
+    Best,
+    Huy & Thiên Thanh
         """)
     else:
         msg['Subject'] = "RSVP Confirmation - Thiên Hân's Baby Shower"
@@ -65,7 +65,6 @@ def send_email(name, recipient, attendance, guests):
     Hi {name},
 
     Thank you so much for your RSVP! We're so excited that you'll be joining us for Thiên Hân’s Baby Shower.
-
 
     We've received your RSVP for {guests} guests (including yourself).
     
