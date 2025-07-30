@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>We’ll Miss You!</title>
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      background-color: #fffaf3;
+      color: #5a3e2b;
+      margin: 0;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .hug-emoji {
+      font-size: 40px;
+      margin-top: 20px;
+    }
+
+    .back-button {
+      margin-top: 40px;
+    }
+
+    .back-button a {
+      text-decoration: none;
+      background-color: #e6b835;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-family: "Georgia", serif;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button a:hover {
+      background-color: #d0a92e;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💌 We’ll Miss You, {{ name }}!</h1>
+  <p>Thank you for letting us know. We’re sad you can’t make it,</p>
+  <p>but we completely understand and we’ll be thinking of you.</p>
+  <p>Wishing you all the best until we meet again! 🤎</p>
+
+  <div class="hug-emoji">🤗</div>
+
+  <div class="back-button">
+    <a href="/">← Back to RSVP</a>
+  </div>
+
+</body>
+</html>
+
+

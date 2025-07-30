@@ -33,31 +33,48 @@ def submit():
     # Log to Google Sheets
     log_to_google_sheets(name, email, attendance, guests)
 
-    return render_template("thank_you.html", name=name)
+    # Redirect based on attendance
+    if attendance == "No":
+        return render_template("sorry.html", name=name)
+    else:
+        return render_template("thank_you.html", name=name)
 
 def send_email(name, recipient, attendance, guests):
     email_address = os.getenv("EMAIL_ADDRESS")
     email_password = os.getenv("EMAIL_PASSWORD")
 
     msg = EmailMessage()
-    msg['Subject'] = "RSVP Confirmation - Thiên Hân's Baby Shower"
     msg['From'] = email_address
     msg['To'] = recipient
 
-    msg.set_content(f"""
-    Hi {name},
+    if attendance == "No":
+        msg['Subject'] = "We’ll Miss You - RSVP Received"
+        msg.set_content(f"""
+        Hi {name},
 
-    Thank you for your RSVP!
+        Thank you for letting us know you won't be able to attend.
 
-    Attendance: {attendance}
-    Number of guests (including you): {guests}
+        We understand and will miss you dearly. If your plans change, feel free to RSVP again anytime.
 
-    We look forward to celebrating with you!
+        With love,
+        Huy & Thiên Thanh
+        """)
+    else:
+        msg['Subject'] = "RSVP Confirmation - Thiên Hân's Baby Shower"
+        msg.set_content(f"""
+        Hi {name},
 
-    🧸 Jubilee Thiên Hân Tôn’s Baby Shower
-    📍 2060 Mandelay Pl, San Jose, CA 95138
-    📅 August 16, 2025 at 6:00 PM
-    """)
+        Thank you for your RSVP!
+
+        Attendance: {attendance}
+        Number of guests (including you): {guests}
+
+        We look forward to celebrating with you!
+
+        🧸 Jubilee Thiên Hân Tôn’s Baby Shower
+        📍 2060 Mandelay Pl, San Jose, CA 95138
+        📅 August 16, 2025 at 6:00 PM
+        """)
 
     try:
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
