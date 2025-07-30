@@ -92,11 +92,14 @@
             }
         }
     </style>
+
+    <!-- ✅ Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
     <h1> 🧸Thank you for your RSVP, {{ name }}!❤ </h1>
 
-    <p>We’re excited to celebrate with you.</p>
+    <p>We’re excited to celebrate with you!</p>
     <p>📅 Want to add the event to your calendar?</p>
 
     <div class="calendar-buttons">
@@ -112,5 +115,16 @@
     <div class="back-button">
         <a href="/">← Back to RSVP</a>
     </div>
+
+    <!-- ✅ Launch confetti on page load -->
+    <script>
+      setTimeout(() => {
+        confetti({
+          particleCount: 150,
+          spread: 90,
+          origin: { y: 0.6 }
+        });
+      }, 500);
+    </script>
 </body>
 </html>
