@@ -52,10 +52,8 @@ def send_email(name, recipient, attendance, guests):
         msg.set_content(f"""
         Hi {name},
 
-        Thank you for letting us know you won't be able to attend. 
+        Thank you for letting us know you won't be able to attend. We understand and will miss you dearly. 
 
-        We understand and will miss you dearly. 
-        
         If your plans change, feel free to RSVP again anytime.
 
         With love,
