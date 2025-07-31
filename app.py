@@ -66,7 +66,7 @@ def send_email(name, recipient, attendance, guests):
 
     We've received your RSVP for {guests} guests (including yourself).
     
-    The event will be held on: 
+    Event information is as follows:
     🧸 Jubilee Thiên Hân Tôn’s Baby Shower
     📍 2060 Mandelay Pl, San Jose, CA 95138
     📅 August 16, 2025 at 6:00 PM
