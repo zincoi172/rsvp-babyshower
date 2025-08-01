@@ -70,6 +70,7 @@ def send_email(name, recipient, attendance, guests):
     🧸 Jubilee Thiên Hân Tôn’s Baby Shower
     📍 2060 Mandelay Pl, San Jose, CA 95138
     🗓️ August 16, 2025 at 6:00 PM
+    🚗 Please find street parking upon arrival. 
 
     We're looking forward to celebrating with you. 
 
